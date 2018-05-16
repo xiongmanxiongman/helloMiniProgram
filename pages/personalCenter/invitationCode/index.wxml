@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container" hidden="{{listFlag ? true : false}}">
+  <view class="description">invitationCode</view>
+  <view class="table">
+    <view class="tr" wx:for="{{list}}" wx:key="">
+      <view class="td">{{item.u}}</view><view class="td">{{item.m}}</view>
+    </view>
+  </view>
+  <view class="btnBox">
+    <button type="default" bindtap="previous"> 上一页 </button>
+    <button type="default" bindtap="next"> 下一页 </button>
+  </view>
+  <button type="default" bindtap="showAdd"> 新建 </button>
+</view>
+<view class="container" hidden="{{addFlag ? true : false}}">
+  <view class="inputBox">
+    <view class="input">
+      <input  bindinput="inputCompany" placeholder="请输入公司名称"/>
+    </view>
+    <view class="input">
+      <input  bindinput="inputMail" placeholder="请输入招聘邮箱"/>
+    </view>
+  </view>
+  <button type="default" bindtap="add"> 添加一条 </button>
+</view>

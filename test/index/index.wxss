@@ -1,0 +1,13 @@
+@import "/lib/weui.wxss";
+navigator{
+    padding: 20rpx;
+    border-bottom:thin solid #ccc;
+}
+.txt{
+  padding-top:20rpx;
+  font-weight: bold;
+  display: inline-block;
+}
+.navigator-hover {
+    color:blue;
+}
