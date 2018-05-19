@@ -1,0 +1,16 @@
+page{
+  background: #f8f8f8;
+}
+.paymentSuccess{
+  height: 50vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.x-item{
+  text-align: center;
+  font-size: 60rpx;
+}
+.pick-up-code{
+  color: #eb5e1b;
+}

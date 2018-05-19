@@ -1,0 +1,90 @@
+page{
+  background: #f8f8f8;
+}
+.classification{
+  display: flex;
+  justify-content: space-between;
+}
+.x-sidebar{
+  width: 180rpx;
+}
+.x-container{
+  flex: 1;
+}
+.x-content{
+  padding: 0 20rpx;
+}
+.x-menu{
+  width: 180rpx;
+  display: flex;
+  flex-direction:column;
+  position: fixed;
+  left: 0; top: 0;
+}
+.x-menu .x-on{
+  color: #3083EB;
+  background: #E3F0FC;
+  border-left: thin solid #3083EB;
+  border-right: thin solid #3083EB;
+}
+.x-menu-item{
+  border: thin solid #F6FAFD; 
+  line-height: 72rpx;
+  color: #536083;
+  text-align: center;
+}
+.x-title{
+  display: flex;
+  align-items: center;
+  height: 76rpx;
+}
+.x-title text{
+  border-left: medium solid #3083EB;
+  padding: 0 20rpx;
+}
+.x-card{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.x-card-item{
+  width: 240rpx;
+}
+.x-card-img image{
+  width: 240rpx;
+  height: 240rpx;
+}
+.x-card-txt{
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.x-card-tit{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.x-card-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.x-card-price .txt1{
+  color: #eb5e1b;
+}
+.x-card-price .txt2{
+  font-size:26rpx;
+  color: #949494;
+}
+.network{
+  color: #eb5e1b;
+  font-size: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}

@@ -1,0 +1,58 @@
+<block wx:if="{{networkData}}">
+  <view class="details">
+    <view class="details-group">
+      <view class="details-img">
+        <image mode="aspectFill" src="{{detailsData.src}}"></image>
+      </view>
+      <view class="details-price">
+        <text class="txt1">¥ {{detailsData.price}}</text>
+        <text class="txt2">新品</text>
+      </view>
+      <view class="details-discount">
+        <text class="txt1">折扣</text>
+        <text class="txt2">{{detailsData.discount}}</text>
+      </view>
+      <view class="details-tit">
+        <text>{{detailsData.name}}</text>
+      </view>
+      <view class="details-salesVolume">
+        <text class="txt1">销量</text>
+        <text class="txt2">{{detailsData.salesVolume}}</text>
+      </view>
+    </view>
+    <view class="details-group">
+      <view class="details-quantity">
+        <view class="item1">
+          <text>购买数量</text>
+        </view>
+        <view class="item2">
+          <button type="default" plain="true" bindtap="subtract">-</button>
+          <input bindinput="quantity" placeholder="" value="{{quantityData}}"/>
+          <button type="default" plain="true" bindtap="add">+</button>
+        </view>
+      </view>
+      <view class="details-total">
+        <text class="txt1">共1件商品 小计:</text>
+        <text class="txt2">¥{{detailsData.price*quantityData}}</text>
+      </view>
+      <view class="details-purchase">
+        <text class="txt1">合计金额:</text>
+        <text class="txt2">¥ {{detailsData.price*quantityData}}</text>
+        <button type="warn" size="mini" disabled="{{purchaseDisabled}}" plain="true" bindtap="purchase"> 立即购买 </button>
+      </view>
+    </view>
+    <block wx:if="{{confirmData}}">
+    <view class="details-shadow"></view>
+    <view class="details-confirm">
+      <view class="details-confirm-title">
+        <view class="details-confirm-close" bindtap="close">×</view><text class="tit">确认付款</text>
+      </view>
+      <view class="details-confirm-total">¥ {{detailsData.price*quantityData}}</view>
+      <button type="primary" disabled="{{paymentDisabled}}" plain="true" bindtap="payment"> 确认付款 </button>
+    </view>
+    </block>
+  </view>
+</block>
+<block wx:if="{{!networkData}}">
+<view class="network"><text>网络似乎不通</text></view>
+</block>

@@ -1,0 +1,39 @@
+<block wx:if="{{networkData}}">
+<view class="classification">
+  <view class="x-sidebar">
+    <view class="x-menu">
+      <block wx:for="{{classificationData}}" wx:key="id">
+        <view data-index="{{index}}" bindtap="menuTap" class="x-menu-item {{index==menuActive?'x-on':''}}">{{item.title}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="x-container">
+    <view class="x-content">
+    <scroll-view scroll-y style="height: 100vh;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <block wx:for="{{classificationData}}" wx:key="id">
+        <view id="title{{index}}" class="x-title"><text>{{item.title}}</text></view>
+        <view class="x-card">
+        <block wx:for="{{item.card}}" wx:for-item="card" wx:key="cid">
+          <view class="x-card-item" data-cid="{{card.cid}}" bindtap="productTap">
+            <view class="x-card-img">
+              <image mode="aspectFill" src="{{card.src}}"></image>
+            </view>
+            <view class="x-card-txt">
+              <view class="x-card-tit"><text>{{card.name}}</text></view>
+              <view class="x-card-price">
+                <text class="txt1">{{card.price}} 元</text>
+                <text class="txt2">销量{{card.salesVolume}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+        </view>
+    </block>
+    </scroll-view>
+    </view>
+  </view>
+</view>
+</block>
+<block wx:if="{{!networkData}}">
+<view class="network"><text>网络似乎不通</text></view>
+</block>

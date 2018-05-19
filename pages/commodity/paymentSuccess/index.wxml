@@ -1,0 +1,8 @@
+<view class="paymentSuccess">
+  <view class="x-item">
+    <text>付款成功!</text>
+  </view>
+  <view class="x-item">
+    <text>取货码</text><text class="pick-up-code">{{pickUpCodeData}}</text>
+  </view>
+</view>
